@@ -16,6 +16,19 @@ Find availability zones that exist for your account in any given region
 aws --profile=cloudcasts ec2 describe-availability-zones --region us-east-2
 ```
 
+```
+aws --profile=cloudcasts ec2 describe-availability-zones \
+    --region us-east-2 \
+    --query 'AvailabilityZones[].ZoneName'
+ 
+# Output:
+[
+    "us-east-2a",
+    "us-east-2b",
+    "us-east-2c"
+]
+```
+
 
 
 
